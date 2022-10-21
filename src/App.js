@@ -2,6 +2,7 @@ import { Container } from "@mui/system";
 import React, { useState } from "react";
 
 import TodoForm from "./components/TodoForm";
+import Todolist from "./components/Todolist";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -29,6 +30,7 @@ function App() {
   return (
     <Container maxWidth="sm">
       <TodoForm addTodo={addTodo} />
+      <Todolist todos={todos} />
     </Container>
   );
 }
